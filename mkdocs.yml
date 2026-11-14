@@ -1,0 +1,54 @@
+site_name: Marco's Recipes
+site_description: Recipes organized by how much time they deserve.
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.indexes      # chapter pages act as section landing pages
+    - navigation.footer       # previous / next links
+    - navigation.top          # back-to-top button
+    - navigation.expand
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tooltips
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - 1 · Quick (< 30 min):
+      - 1-quick/index.md
+  - 2 · Weeknight (30–60 min):
+      - 2-weeknight/index.md
+      - 2.1 Fish & seafood:
+          - 2-weeknight/2.1-fish/index.md
+          - 2.1.1 One-dish baked salmon: 2-weeknight/2.1-fish/2.1.1-baked-salmon.md
+  - 3 · Weekend projects (1 h+):
+      - 3-weekend/index.md
+  - Techniques:
+      - techniques/index.md
+      - Timing ingredients in the oven: techniques/oven-timing.md
